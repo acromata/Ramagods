@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public class s_Interaction : MonoBehaviour
 {
     void OnTriggerStay2D(Collider2D col)
     {

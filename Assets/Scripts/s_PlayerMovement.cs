@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class s_PlayerMovement : MonoBehaviour
 {
-    public CharacterController2D controller;
+    public s_CharacterController2D controller;
     float HorizontalMove;
     private float currentSpeed;
     [SerializeField] private float runSpeed;
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D> ();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()

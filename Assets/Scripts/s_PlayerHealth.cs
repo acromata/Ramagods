@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour
+public class s_PlayerHealth : MonoBehaviour
 {
     
     public int health;
@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHearts;
     public Sprite emptyHearts;
-    private bool fullHealth;
+    [HideInInspector] public bool fullHealth;
     
 
 
@@ -82,8 +82,7 @@ public class Health : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-                numOfHearts = numOfHearts + 1;
-                Debug.Log("Gained Hearts");
+                GetComponent<s_HeartBoost>().gainHearts();
             }
         }
     }
@@ -105,21 +104,6 @@ public class Health : MonoBehaviour
     {
         health = health + 1;
         Debug.Log("Healed");
-    }
-
-    void gainHearts()
-    {
-        if(fullHealth == true)
-        {
-            numOfHearts = numOfHearts + 1;
-            health = health + numOfHearts;
-        }
-        else
-        {
-            health = health + numOfHearts;
-            numOfHearts = numOfHearts + 1;
-        }
-        Debug.Log("Hearts Gained");
     }
 
     void die()

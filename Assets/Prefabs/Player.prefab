@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1407009015578226991}
   - component: {fileID: 1407009015578226994}
   - component: {fileID: 1407009015578226993}
-  - component: {fileID: 1407009015578226997}
+  - component: {fileID: 3425858995406902591}
   - component: {fileID: 1407009015578226996}
   - component: {fileID: 1407009015578226999}
   - component: {fileID: 1407009015578226998}
@@ -202,9 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1407009015578226994}
   runSpeed: 50
-  dashDistance: 10
-  dashTime: 0.4
---- !u!114 &1407009015578226997
+  walkSpeed: 0
+--- !u!114 &3425858995406902591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,19 +212,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1407009015578226988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be1e88d209466794f906d84ec9bf064d, type: 3}
+  m_Script: {fileID: 11500000, guid: c57d4c42cf59f43499cda2c81377e38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  numOfHearts: 3
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fullHearts: {fileID: 5642012044021194823, guid: 5b648ded82d01ad4b8f48dd4474c8f11, type: 3}
-  emptyHearts: {fileID: 4432793351920879750, guid: 5b648ded82d01ad4b8f48dd4474c8f11, type: 3}
+  health: 0
+  numOfHearts: 0
+  hearts: []
+  fullHearts: {fileID: 0}
+  emptyHearts: {fileID: 0}
+  fullHealth: 0
 --- !u!114 &1407009015578226996
 MonoBehaviour:
   m_ObjectHideFlags: 0
