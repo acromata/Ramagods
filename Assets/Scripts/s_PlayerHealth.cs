@@ -94,9 +94,11 @@ public class s_PlayerHealth : MonoBehaviour
         {
             health = health - 3;
             Debug.Log("Trap");
+        } else if (col.gameObject.name == "Enemy")
+        {
+            health = health - 1;
         }
     }
-
 
 
 
